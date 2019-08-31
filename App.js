@@ -95,6 +95,7 @@ export default class App extends Component {
     this.setState({
       rate: this.state.newrate
     })
+    
   }
   render() {
     return (

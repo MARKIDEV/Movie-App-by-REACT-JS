@@ -1,11 +1,11 @@
 import React from "react";
-
-export default function Rating({props, ChangeRate = () => {}}) {
+                                      
+export default function RatingFilter(props, ChangeRate = () => {}) {
   let arr = [];
-
+  
   for (let i = 0; i < 5; i++) {
-    if (i < props.rate) {
-      arr.push(<span onClick={() =>  ChangeRate(i+1)} >★</span>);
+    if (i < props.rate) { //<= le problème!!!
+      arr.push(<span onClick={() =>{ChangeRate(i+1)}} >★</span>);
     } else {
       arr.push(<span>☆</span>);
     }
